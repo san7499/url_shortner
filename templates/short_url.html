@@ -21,8 +21,8 @@
     <h2 class="mb-4 title">✅ Your Shortened URL</h2>
 
     <div class="alert alert-success short-url-box">
-      <a href="/{{ short_code }}" target="_blank" class="short-url">
-        http://localhost:5000/{{ short_code }}
+      <a href="{{ short_url }}" target="_blank" class="short-url">
+        {{ short_url }}
       </a>
     </div>
 
@@ -35,7 +35,7 @@
 
 <script>
   function copyToClipboard() {
-    const text = "http://localhost:5000/{{ short_code }}";
+    const text = "{{ short_url }}";
     navigator.clipboard.writeText(text).then(() => {
       alert("✅ Copied to clipboard!");
     });
