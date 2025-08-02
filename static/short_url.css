@@ -1,0 +1,79 @@
+/* Global Styles */
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background-blur {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Glassmorphism Container */
+.form-container {
+  width: 100%;
+  max-width: 480px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #eeeeee;
+}
+
+.btn-custom {
+  background-color: #4a00e0;
+  color: white;
+  padding: 14px 28px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-custom:hover {
+  background-color: #8e2de2;
+  color: white;
+}
+
+.small-footer {
+  font-size: 12px;
+  color: #dcdcdc;
+  margin-top: 20px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  } to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
