@@ -53,7 +53,10 @@ def index():
         finally:
             conn.close()
 
-        short_url = request.host_url + short_code
+        # Use deployed domain if available
+        base_url = os.environ.get("BASE_URL", request.host_url)
+        short_url = base_url.rstrip('/') + '/' + short_code
+
         return render_template('short_url.html', short_url=short_url)
 
     return render_template('index.html')
